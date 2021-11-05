@@ -1,7 +1,9 @@
 import cv2
 import os
+from tkinter import filedialog
 
-entrada = cv2.imread("./images/finger2.tif")
+caminho = filedialog.askopenfilename()
+entrada = cv2.imread(caminho)
 for file in [file for file in os.listdir("database")]:
     original = cv2.imread("database/"+file)
 
@@ -24,7 +26,6 @@ for file in [file for file in os.listdir("database")]:
         keypoints = len(keypoints_2)
 
     compt=(len(ponts) / keypoints)
-    if compt > 0.95:
-
-        print("% Compatibilidade "+file+": ", compt * 100)
+    #if compt > 0.95:
+    print("% Compatibilidade "+file+": ", compt * 100)
 

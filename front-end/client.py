@@ -1,8 +1,4 @@
-import tkinter as tk
-from tkinter import Label, PhotoImage, filedialog
-from tkinter import font
-from PIL import ImageTk
-import PIL.Image
+
 
 def escolherDigital():
     digital = filedialog.askopenfilename(title='Selecione a digital', filetypes=[('JPEG', '*.jpg')])
@@ -27,6 +23,7 @@ def displayImage(the):
     # confirmFoto.pack()
     the.show()
 
+
 login = tk.Tk()
 login.title('Login de Funcionário')
 login.geometry('400x400')
@@ -44,3 +41,4 @@ escolherImgBtn = tk.Button(loginF, text='Escolher Arquivo', relief='solid', comm
 escolherImgBtn.pack(side=tk.BOTTOM)
 
 login.mainloop()
+
